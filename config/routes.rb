@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :portfols, except: [:show]
+  get 'angular-items', to: 'portfols#angular'
   get 'portfol/:id', to: 'portfols#show', as: 'portfol_show'
 
   resources :blogs do
